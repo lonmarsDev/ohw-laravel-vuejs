@@ -39,6 +39,9 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapWebRoutes();
 
+        $this->mapEmnel3000Routes();
+
+        $this->mapAdminRoutes();
         //
     }
 
@@ -69,5 +72,23 @@ class RouteServiceProvider extends ServiceProvider
              ->middleware('api')
              ->namespace($this->namespace)
              ->group(base_path('routes/api.php'));
+    }
+
+    protected function mapEmnel3000Routes()
+    {
+        Route::prefix('emnel3000')
+            ->middleware('web')
+            ->namespace($this->namespace . '\Emnel3000')
+            ->group(base_path('routes/emnel3000.php'));
+    }
+    
+    /**
+    * Map the admin routes
+    */
+    public function mapAdminRoutes(){
+        Route::prefix('admin')
+             ->middleware('web')
+             ->namespace($this->namespace.'\Admin')
+             ->group(base_path('routes/admin.php'));
     }
 }

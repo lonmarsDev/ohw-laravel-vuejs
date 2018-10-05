@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\Check2fAuthentication;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -35,6 +36,7 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            \Laravel\Passport\Http\Middleware\CreateFreshApiToken::class,
         ],
 
         'api' => [
@@ -59,5 +61,7 @@ class Kernel extends HttpKernel
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'check2fAuth' => Check2fAuthentication::class,
+        'checkpermission' =>\App\Http\Middleware\CheckUserPermissions::class,
     ];
 }

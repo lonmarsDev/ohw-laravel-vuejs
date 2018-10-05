@@ -1,0 +1,58 @@
+#Table>tbody>tr>td a ,#Table>tbody>tr>td a {
+    /* border-radius: 50%; */
+  } 
+  #Table>tbody>tr>td a span , .Table>tbody>tr>td a span{
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .fa-cdanger{
+    color: red;
+  }
+  .fa-cwarning{
+    color: #222D32;/*#eb9316; */
+  }
+  .fa-aqua{
+    color: #00c0ef;
+  }
+  .error {
+    color: #a94442;
+  }
+  /* Validation Error */
+  .text-error{
+    /* border-color: red; */
+     border:1px solid red;
+  }
+  .box .box-header .box-title .btn-back,.box .box-header .box-title .btn {
+    background-color: #385f72;
+    border-color: #385f80;
+    color: white;
+  }
+  .box .box-header .box-title .btn-back:hover,.box .box-header .box-title .btn:hover {
+    background-color: #385f72;
+    color: white;
+  }
+  .top-margin{
+    margin-top: 20px;
+  }
+  .text-justify{ text-align: justify; }
+  /* To Remove A Scroll From Right Side*/
+  .wrapper {
+    position: unset !important;
+  }
+  #DDescription { text-align: justify; }
+  .box-body .mb {
+    margin-bottom: 2%;}
+  #Table1>tbody>tr>td a , #Table2>tbody>tr>td a {
+    font-size: 15px;
+  }
+  .mr-top { margin-top: 2%; }
+  /*------------------------------------------Backend CSS Changes----------------------------*/
+
+.sidebar {
+    padding-bottom: 0px;
+}
+
+.sidebar-menu>li>a {
+    padding: 10px 5px 10px 15px;
+    display: block;
+}

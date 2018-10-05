@@ -1,3 +1,4 @@
+
 <?php
 
 return [
@@ -64,6 +65,12 @@ return [
             'url' => env('AWS_URL'),
         ],
 
+        '2fa' => [
+            'driver' => 'local',
+            'root' => storage_path('app/2fa')
+        ]
+
     ],
 
 ];
+

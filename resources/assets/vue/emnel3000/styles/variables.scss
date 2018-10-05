@@ -1,0 +1,117 @@
+$test: #e2e2e2;
+
+// OHWO COLOR PALLETE
+$blue: #69c8f6; // blue
+$purple: #caa4db; // purple
+$orange: #f7c34e; // orange
+$red: #fa6d57; // red
+$yellow: #f9d645; // yellow
+$teal: #16b3b9; // teal
+$tangerine: #ee9879; // tangerine
+$green: #97be4b; // green
+$text1: #2b3443; // text1
+$text2: #666666; // text2
+$text3: #999999; // text3
+
+/**
+  * background color
+  *
+  *
+  */
+.bg-blue {
+  background: $blue;
+}
+
+.bg-purple {
+  background: $purple;
+}
+
+.bg-orange {
+  background: $orange;
+}
+
+.bg-red {
+  background: $red;
+}
+
+.bg-yellow {
+  background: $yellow;
+}
+
+.bg-teal {
+  background: $teal;
+}
+
+.bg-tangerine {
+  background: $tangerine;
+}
+
+.bg-green {
+  background: $green !important;
+}
+
+.bg-text1 {
+  background: $text1;
+}
+
+.bg-text2 {
+  background: $text2;
+}
+
+.bg-text3 {
+  background: $text3;
+}
+
+/**
+  * Color
+  *
+  *
+  */
+
+.white {
+  color: #fff;
+}
+
+.blue {
+  color: $blue;
+}
+
+.purple {
+  color: $purple;
+}
+
+.orange {
+  color: $orange;
+}
+
+.red {
+  color: $red;
+}
+
+.yellow {
+  color: $yellow;
+}
+
+.teal {
+  color: $teal;
+}
+
+.tangerine {
+  color: $tangerine;
+}
+
+.green {
+  color: $green !important;
+}
+
+.color-text1 {
+  color: $text1;
+}
+
+.color-text2 {
+  color: $text2;
+}
+
+.color-text3 {
+  color: $text3;
+}

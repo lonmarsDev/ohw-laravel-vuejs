@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -34,6 +35,27 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest')->except('logout');
+        $this->middleware('guest')->except(['logout']);
+    }
+
+    /**
+     * Users has been authenticated
+     * next we check if users has enabled 2fauthentication
+     *
+     * @param Request $request
+     * @param $user
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    protected function authenticated(Request $request, $user)
+    {
+        if ($user->two_factor_authentication) {
+            return redirect()->route('auth.two_factor');
+        }
+        if($user->role->name !='owner' && $user->role->name !='assistant'){
+            $this->redirectTo ='admin/dashboard';
+        }
+        
+        return redirect()->intended($this->redirectPath());
     }
 }
+
